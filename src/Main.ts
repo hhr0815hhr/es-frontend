@@ -7,9 +7,9 @@ class Main extends eui.UILayer {
 
         //inject the custom material parser
         //注入自定义的素材解析器
-        let assetAdapter = new AssetAdapter();
+        let assetAdapter = new core.AssetAdapter();
         egret.registerImplementation("eui.IAssetAdapter", assetAdapter);
-        egret.registerImplementation("eui.IThemeAdapter", new ThemeAdapter());
+        egret.registerImplementation("eui.IThemeAdapter", new core.ThemeAdapter());
 
 
         this.runGame().catch(e => {
