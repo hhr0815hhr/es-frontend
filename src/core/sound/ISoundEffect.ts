@@ -1,5 +1,7 @@
-interface ISoundEffect {
-    play(effectName: string, loops: number): void;
-    stop(effectName: string): void;
-    setVolume(volume: number): void;
+module core {
+    export interface ISoundEffect {
+        play(effectName: string, loops: number): void;
+        stop(effectName: string): void;
+        setVolume(volume: number): void;
+    }
 }

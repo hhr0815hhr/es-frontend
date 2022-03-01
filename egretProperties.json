@@ -19,6 +19,12 @@
       "name": "game"
     },
     {
+      "name": "dragonBones"
+    },
+    {
+      "name": "socket"
+    },
+    {
       "name": "tween"
     },
     {

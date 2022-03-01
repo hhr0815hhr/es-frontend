@@ -5,7 +5,7 @@ module core {
         }
 
         private static _instance: any;
-        public static getInstance(...params: any[]): any {
+        public static getSingtonInstance(...params: any[]): any {
             let Class: any = this;
             if (!Class._instance) {
                 Class._instance = new Class(...params);

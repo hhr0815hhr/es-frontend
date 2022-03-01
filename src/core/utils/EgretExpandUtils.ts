@@ -1,18 +1,20 @@
-/**
- * Created by yangsong on 15-1-23.
- * 引擎扩展类
- */
-class EgretExpandUtils extends SingtonClass {
+module core {
     /**
-     * 构造函数
+     * Created by yangsong on 15-1-23.
+     * 引擎扩展类
      */
-    public constructor() {
-        super();
-    }
+    export class EgretExpandUtils extends Singleton {
+        /**
+         * 构造函数
+         */
+        public constructor() {
+            super();
+        }
 
-    /**
-     * 初始化函数
-     */
-    public init(): void {
+        /**
+         * 初始化函数
+         */
+        public init(): void {
+        }
     }
 }
