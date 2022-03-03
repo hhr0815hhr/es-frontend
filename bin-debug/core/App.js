@@ -337,19 +337,15 @@ var core;
             enumerable: true,
             configurable: true
         });
-        Object.defineProperty(App, "DragonBonesFactory", {
-            /**
-             * DragonBones工厂类
-             * @returns {any}
-             * @constructor
-             */
-            get: function () {
-                return core.DragonBonesFactory.getSingtonInstance();
-            },
-            enumerable: true,
-            configurable: true
-        });
         Object.defineProperty(App, "StarlingSwfFactory", {
+            // /**
+            //  * DragonBones工厂类
+            //  * @returns {any}
+            //  * @constructor
+            //  */
+            // public static get DragonBonesFactory(): DragonBonesFactory {
+            //     return DragonBonesFactory.getSingtonInstance();
+            // }
             /**
              * StarlingSwf工厂类
              * @returns {StarlingSwfFactory}
