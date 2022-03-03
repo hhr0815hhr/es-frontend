@@ -3,7 +3,7 @@ module core {
      * Created by yangsong on 2014/11/22.
      * Controller管理类
      */
-    export class ControllerManager extends Singleton {
+    export class ModuleManager extends Singleton {
         private _modules: any;
 
         /**
@@ -59,12 +59,12 @@ module core {
 
         /**
          * 跨模块消息传递
-         * @param controllerD Controller唯一标识
+         * @param moduleId module唯一标识
          * @param key 消息唯一标识
          *
          */
-        public applyFunc(controllerD: number, key: number, ...param: any[]): any {
-            var manager: BaseController = this._modules[controllerD];
+        public applyFunc(moduleId: number, key: number, ...param: any[]): any {
+            var manager: BaseController = this._modules[moduleId];
             if (manager) {
                 var params = [];
                 for (var i = 1; i < arguments.length; i++) {
@@ -72,7 +72,7 @@ module core {
                 }
                 return manager.applyFunc.apply(manager, params);
             } else {
-                Log.warn("模块" + controllerD + "不存在");
+                Log.warn("模块" + moduleId + "不存在");
                 return null;
             }
         }

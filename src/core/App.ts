@@ -39,8 +39,8 @@ module core {
          * 模块管理类
          * @type {ControllerManager}
          */
-        public static get ControllerManager(): ControllerManager {
-            return ControllerManager.getSingtonInstance();
+        public static get ModuleManager(): ModuleManager {
+            return ModuleManager.getSingtonInstance();
         }
 
         /**

@@ -11,7 +11,7 @@ module core {
                 return;
             }
             let message = "[Debug]" + optionalParams.shift();
-            console.log(message, ...optionalParams);
+            egret.log(message, ...optionalParams);
         }
 
         /**
@@ -19,7 +19,7 @@ module core {
          */
         public static info(...optionalParams): void {
             let message = "[Info]" + optionalParams.shift();
-            console.log(message, ...optionalParams);
+            egret.log(message, ...optionalParams);
         }
 
         /**
@@ -27,7 +27,7 @@ module core {
          */
         public static warn(...optionalParams): void {
             let message = "[Warn]" + optionalParams.shift();
-            console.warn(message, ...optionalParams);
+            egret.warn(message, ...optionalParams);
         }
 
         /**
@@ -35,7 +35,7 @@ module core {
          */
         public static error(...optionalParams): void {
             let message = "[Error]" + optionalParams.shift();
-            console.error(message, ...optionalParams);
+            egret.error(message, ...optionalParams);
         }
     }
 }

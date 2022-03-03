@@ -55,7 +55,7 @@ module core {
          *
          */
         public applyControllerFunc(controllerKey: number, key: any, ...param: any[]): any {
-            return App.ControllerManager.applyFunc.apply(App.ControllerManager, arguments);
+            return App.ModuleManager.applyFunc.apply(App.ModuleManager, arguments);
         }
 
         /**
@@ -80,7 +80,7 @@ module core {
          * @returns {BaseModel}
          */
         public getControllerModel(controllerD: number): BaseModel {
-            return App.ControllerManager.getControllerModel(controllerD);
+            return App.ModuleManager.getControllerModel(controllerD);
         }
 
         /**
