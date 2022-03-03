@@ -31,13 +31,13 @@ var core;
             enumerable: true,
             configurable: true
         });
-        Object.defineProperty(App, "ControllerManager", {
+        Object.defineProperty(App, "ModuleManager", {
             /**
              * 模块管理类
              * @type {ControllerManager}
              */
             get: function () {
-                return core.ControllerManager.getSingtonInstance();
+                return core.ModuleManager.getSingtonInstance();
             },
             enumerable: true,
             configurable: true
@@ -436,3 +436,4 @@ var core;
     core.App = App;
     __reflect(App.prototype, "core.App");
 })(core || (core = {}));
+//# sourceMappingURL=App.js.map

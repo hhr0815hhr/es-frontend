@@ -114,3 +114,4 @@ var core;
     core.SoundBg = SoundBg;
     __reflect(SoundBg.prototype, "core.SoundBg", ["core.ISoundBg"]);
 })(core || (core = {}));
+//# sourceMappingURL=SoundBg.js.map

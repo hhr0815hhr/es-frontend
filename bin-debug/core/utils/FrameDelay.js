@@ -34,3 +34,4 @@ var core;
     core.FrameDelay = FrameDelay;
     __reflect(FrameDelay.prototype, "core.FrameDelay");
 })(core || (core = {}));
+//# sourceMappingURL=FrameDelay.js.map

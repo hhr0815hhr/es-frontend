@@ -177,3 +177,4 @@ var core;
     core.BaseSpriteView = BaseSpriteView;
     __reflect(BaseSpriteView.prototype, "core.BaseSpriteView", ["core.IBaseView"]);
 })(core || (core = {}));
+//# sourceMappingURL=BaseSpriteView.js.map

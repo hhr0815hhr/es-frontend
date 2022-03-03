@@ -158,3 +158,4 @@ var core;
     core.GuideView = GuideView;
     __reflect(GuideView.prototype, "core.GuideView");
 })(core || (core = {}));
+//# sourceMappingURL=GuideView.js.map

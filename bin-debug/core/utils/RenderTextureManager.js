@@ -90,3 +90,4 @@ var core;
     core.RenderTextureManager = RenderTextureManager;
     __reflect(RenderTextureManager.prototype, "core.RenderTextureManager");
 })(core || (core = {}));
+//# sourceMappingURL=RenderTextureManager.js.map

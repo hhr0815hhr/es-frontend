@@ -122,3 +122,4 @@ var core;
     core.StarlingSwfFactory = StarlingSwfFactory;
     __reflect(StarlingSwfFactory.prototype, "core.StarlingSwfFactory");
 })(core || (core = {}));
+//# sourceMappingURL=StarlingSwfFactory.js.map

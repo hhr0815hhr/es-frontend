@@ -61,3 +61,4 @@ var core;
     core.EasyLoading = EasyLoading;
     __reflect(EasyLoading.prototype, "core.EasyLoading");
 })(core || (core = {}));
+//# sourceMappingURL=EasyLoading.js.map

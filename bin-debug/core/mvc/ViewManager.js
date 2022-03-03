@@ -190,3 +190,4 @@ var core;
     core.ViewManager = ViewManager;
     __reflect(ViewManager.prototype, "core.ViewManager");
 })(core || (core = {}));
+//# sourceMappingURL=ViewManager.js.map

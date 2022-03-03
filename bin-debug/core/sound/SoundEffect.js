@@ -94,3 +94,4 @@ var core;
     core.SoundEffect = SoundEffect;
     __reflect(SoundEffect.prototype, "core.SoundEffect", ["core.ISoundEffect"]);
 })(core || (core = {}));
+//# sourceMappingURL=SoundEffect.js.map

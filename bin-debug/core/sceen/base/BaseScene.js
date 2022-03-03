@@ -72,3 +72,4 @@ var core;
     core.BaseScene = BaseScene;
     __reflect(BaseScene.prototype, "core.BaseScene");
 })(core || (core = {}));
+//# sourceMappingURL=BaseScene.js.map

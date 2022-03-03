@@ -338,3 +338,4 @@
 //         }
 //     }
 // }
+//# sourceMappingURL=DragonBonesArmature.js.map

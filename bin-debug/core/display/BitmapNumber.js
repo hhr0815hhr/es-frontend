@@ -126,3 +126,4 @@ var core;
     core.BitmapNumber = BitmapNumber;
     __reflect(BitmapNumber.prototype, "core.BitmapNumber");
 })(core || (core = {}));
+//# sourceMappingURL=BitmapNumber.js.map

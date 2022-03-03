@@ -24,3 +24,4 @@ var core;
     core.BaseEuiLayer = BaseEuiLayer;
     __reflect(BaseEuiLayer.prototype, "core.BaseEuiLayer");
 })(core || (core = {}));
+//# sourceMappingURL=BaseEuiLayer.js.map

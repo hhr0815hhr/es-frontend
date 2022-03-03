@@ -55,3 +55,4 @@ var core;
     core.UTFMsg = UTFMsg;
     __reflect(UTFMsg.prototype, "core.UTFMsg", ["core.BaseMsg"]);
 })(core || (core = {}));
+//# sourceMappingURL=UTFMsg.js.map

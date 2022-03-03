@@ -270,3 +270,4 @@ var core;
     core.TimerHandler = TimerHandler;
     __reflect(TimerHandler.prototype, "core.TimerHandler");
 })(core || (core = {}));
+//# sourceMappingURL=TimerManager.js.map

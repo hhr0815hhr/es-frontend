@@ -21,7 +21,7 @@ var core;
                 return;
             }
             var message = "[Debug]" + optionalParams.shift();
-            console.log.apply(console, [message].concat(optionalParams));
+            egret.log.apply(egret, [message].concat(optionalParams));
         };
         /**
          * Info
@@ -32,7 +32,7 @@ var core;
                 optionalParams[_i] = arguments[_i];
             }
             var message = "[Info]" + optionalParams.shift();
-            console.log.apply(console, [message].concat(optionalParams));
+            egret.log.apply(egret, [message].concat(optionalParams));
         };
         /**
          * Warn
@@ -43,7 +43,7 @@ var core;
                 optionalParams[_i] = arguments[_i];
             }
             var message = "[Warn]" + optionalParams.shift();
-            console.warn.apply(console, [message].concat(optionalParams));
+            egret.warn.apply(egret, [message].concat(optionalParams));
         };
         /**
          * Error
@@ -54,10 +54,11 @@ var core;
                 optionalParams[_i] = arguments[_i];
             }
             var message = "[Error]" + optionalParams.shift();
-            console.error.apply(console, [message].concat(optionalParams));
+            egret.error.apply(egret, [message].concat(optionalParams));
         };
         return Log;
     }());
     core.Log = Log;
     __reflect(Log.prototype, "core.Log");
 })(core || (core = {}));
+//# sourceMappingURL=Log.js.map

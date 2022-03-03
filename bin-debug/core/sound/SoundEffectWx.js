@@ -91,3 +91,4 @@ var core;
     core.SoundEffectWx = SoundEffectWx;
     __reflect(SoundEffectWx.prototype, "core.SoundEffectWx", ["core.ISoundEffect"]);
 })(core || (core = {}));
+//# sourceMappingURL=SoundEffectWx.js.map

@@ -71,3 +71,4 @@ var core;
     core.SoundBgWx = SoundBgWx;
     __reflect(SoundBgWx.prototype, "core.SoundBgWx", ["core.ISoundBg"]);
 })(core || (core = {}));
+//# sourceMappingURL=SoundBgWx.js.map

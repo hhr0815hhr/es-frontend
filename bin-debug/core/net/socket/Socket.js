@@ -180,3 +180,4 @@ var core;
     core.Socket = Socket;
     __reflect(Socket.prototype, "core.Socket");
 })(core || (core = {}));
+//# sourceMappingURL=Socket.js.map

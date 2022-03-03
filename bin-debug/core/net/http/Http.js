@@ -112,3 +112,4 @@ var core;
     core.Http = Http;
     __reflect(Http.prototype, "core.Http");
 })(core || (core = {}));
+//# sourceMappingURL=Http.js.map

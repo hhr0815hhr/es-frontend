@@ -39,3 +39,4 @@ var core;
     core.StringBuffer = StringBuffer;
     __reflect(StringBuffer.prototype, "core.StringBuffer");
 })(core || (core = {}));
+//# sourceMappingURL=StringBuffer.js.map

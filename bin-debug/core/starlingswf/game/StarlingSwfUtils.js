@@ -212,3 +212,4 @@ var core;
     core.StarlingSwfButtonData = StarlingSwfButtonData;
     __reflect(StarlingSwfButtonData.prototype, "core.StarlingSwfButtonData");
 })(core || (core = {}));
+//# sourceMappingURL=StarlingSwfUtils.js.map

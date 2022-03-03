@@ -76,3 +76,4 @@ var core;
     core.SceneManager = SceneManager;
     __reflect(SceneManager.prototype, "core.SceneManager");
 })(core || (core = {}));
+//# sourceMappingURL=SceenManager.js.map

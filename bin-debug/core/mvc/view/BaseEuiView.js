@@ -170,3 +170,4 @@ var core;
     core.BaseEuiView = BaseEuiView;
     __reflect(BaseEuiView.prototype, "core.BaseEuiView", ["core.IBaseView"]);
 })(core || (core = {}));
+//# sourceMappingURL=BaseEuiView.js.map

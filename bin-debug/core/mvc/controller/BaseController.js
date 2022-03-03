@@ -55,7 +55,7 @@ var core;
             for (var _i = 2; _i < arguments.length; _i++) {
                 param[_i - 2] = arguments[_i];
             }
-            return core.App.ControllerManager.applyFunc.apply(core.App.ControllerManager, arguments);
+            return core.App.ModuleManager.applyFunc.apply(core.App.ModuleManager, arguments);
         };
         /**
          * 设置该模块使用的Model对象
@@ -77,7 +77,7 @@ var core;
          * @returns {BaseModel}
          */
         BaseController.prototype.getControllerModel = function (controllerD) {
-            return core.App.ControllerManager.getControllerModel(controllerD);
+            return core.App.ModuleManager.getControllerModel(controllerD);
         };
         /**
          * View注册
@@ -122,3 +122,4 @@ var core;
     core.BaseController = BaseController;
     __reflect(BaseController.prototype, "core.BaseController");
 })(core || (core = {}));
+//# sourceMappingURL=BaseController.js.map

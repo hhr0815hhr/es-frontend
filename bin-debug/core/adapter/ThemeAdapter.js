@@ -72,3 +72,4 @@ var core;
     core.ThemeAdapter = ThemeAdapter;
     __reflect(ThemeAdapter.prototype, "core.ThemeAdapter", ["eui.IThemeAdapter"]);
 })(core || (core = {}));
+//# sourceMappingURL=ThemeAdapter.js.map

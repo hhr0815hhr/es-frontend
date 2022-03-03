@@ -92,3 +92,4 @@ var core;
     core.TouchEventHook = TouchEventHook;
     __reflect(TouchEventHook.prototype, "core.TouchEventHook");
 })(core || (core = {}));
+//# sourceMappingURL=TouchEventHook.js.map

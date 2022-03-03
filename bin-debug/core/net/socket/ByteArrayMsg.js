@@ -60,3 +60,4 @@ var core;
     core.ByteArrayMsg = ByteArrayMsg;
     __reflect(ByteArrayMsg.prototype, "core.ByteArrayMsg", ["core.BaseMsg"]);
 })(core || (core = {}));
+//# sourceMappingURL=ByteArrayMsg.js.map

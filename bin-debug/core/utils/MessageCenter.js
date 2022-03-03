@@ -199,3 +199,4 @@ var core;
     core.MessageVo = MessageVo;
     __reflect(MessageVo.prototype, "core.MessageVo");
 })(core || (core = {}));
+//# sourceMappingURL=MessageCenter.js.map

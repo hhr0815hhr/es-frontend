@@ -22,3 +22,4 @@ var core;
     core.Singleton = Singleton;
     __reflect(Singleton.prototype, "core.Singleton");
 })(core || (core = {}));
+//# sourceMappingURL=Singleton.js.map

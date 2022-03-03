@@ -40,3 +40,4 @@ var core;
     core.UTFMsgByJson = UTFMsgByJson;
     __reflect(UTFMsgByJson.prototype, "core.UTFMsgByJson");
 })(core || (core = {}));
+//# sourceMappingURL=UTFMsgByJson.js.map

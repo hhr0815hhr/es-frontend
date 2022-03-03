@@ -25,3 +25,4 @@ var core;
     core.BaseSpriteLayer = BaseSpriteLayer;
     __reflect(BaseSpriteLayer.prototype, "core.BaseSpriteLayer");
 })(core || (core = {}));
+//# sourceMappingURL=BaseSpriteLayer.js.map

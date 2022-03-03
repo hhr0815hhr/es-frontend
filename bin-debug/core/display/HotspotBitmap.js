@@ -44,3 +44,4 @@ var core;
     core.HotspotBitmap = HotspotBitmap;
     __reflect(HotspotBitmap.prototype, "core.HotspotBitmap");
 })(core || (core = {}));
+//# sourceMappingURL=HotspotBitmap.js.map

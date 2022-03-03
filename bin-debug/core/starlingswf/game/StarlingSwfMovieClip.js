@@ -108,3 +108,4 @@ var core;
     core.StarlingSwfMovieClip = StarlingSwfMovieClip;
     __reflect(StarlingSwfMovieClip.prototype, "core.StarlingSwfMovieClip");
 })(core || (core = {}));
+//# sourceMappingURL=StarlingSwfMovieClip.js.map

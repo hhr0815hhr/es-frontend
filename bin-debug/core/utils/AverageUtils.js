@@ -52,3 +52,4 @@ var core;
     core.AverageUtils = AverageUtils;
     __reflect(AverageUtils.prototype, "core.AverageUtils");
 })(core || (core = {}));
+//# sourceMappingURL=AverageUtils.js.map

@@ -49,3 +49,4 @@ var core;
     core.SocketConst = SocketConst;
     __reflect(SocketConst.prototype, "core.SocketConst");
 })(core || (core = {}));
+//# sourceMappingURL=SocketConst.js.map

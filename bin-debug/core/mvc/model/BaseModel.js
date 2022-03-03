@@ -21,3 +21,4 @@ var core;
     core.BaseModel = BaseModel;
     __reflect(BaseModel.prototype, "core.BaseModel");
 })(core || (core = {}));
+//# sourceMappingURL=BaseModel.js.map

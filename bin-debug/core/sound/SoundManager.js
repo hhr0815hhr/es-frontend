@@ -199,3 +199,4 @@ var core;
     core.SoundManager = SoundManager;
     __reflect(SoundManager.prototype, "core.SoundManager");
 })(core || (core = {}));
+//# sourceMappingURL=SoundManager.js.map

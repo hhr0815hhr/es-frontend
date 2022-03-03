@@ -50,13 +50,15 @@ var Main = (function (_super) {
     }
     Main.prototype.createChildren = function () {
         _super.prototype.createChildren.call(this);
+        egret.registerImplementation("eui.IAssetAdapter", new core.AssetAdapter());
+        egret.registerImplementation("eui.IThemeAdapter", new core.ThemeAdapter());
+        core.App.StageUtils.startFullscreenAdaptation(650, 1000, this.onResize1);
         //初始化生命周期
         this.initLifecycle();
-        //inject the custom material parser
-        //注入自定义的素材解析器
-        var assetAdapter = new core.AssetAdapter();
-        egret.registerImplementation("eui.IAssetAdapter", assetAdapter);
-        egret.registerImplementation("eui.IThemeAdapter", new core.ThemeAdapter());
+        //初始化所有场景
+        this.initScene();
+        //加载资源配置文件
+        this.loadResConfig();
         this.runGame().catch(function (e) {
             console.log(e);
         });
@@ -67,10 +69,59 @@ var Main = (function (_super) {
         });
         egret.lifecycle.onPause = function () {
             egret.ticker.pause();
+            core.App.TimerManager.pause();
+            core.App.TweenUtils.pause();
         };
         egret.lifecycle.onResume = function () {
             egret.ticker.resume();
+            core.App.TimerManager.resume();
+            core.App.TweenUtils.resume();
         };
+    };
+    /**
+     * 初始化所有场景
+     */
+    Main.prototype.initScene = function () {
+        core.App.SceneManager.register(SceneConst.LOADING, new LoadingScene());
+        core.App.SceneManager.register(SceneConst.UI, new UIScene());
+        // core.App.SceneManager.register(SceneConst.Game, new GameScene());
+        // core.App.SceneManager.register(SceneConst.RpgGame, new RpgGameScene());
+    };
+    Main.prototype.onResize1 = function () {
+        // core.App.ControllerManager.applyFunc(ControllerConst.RpgGame, RpgGameConst.GameResize);
+    };
+    Main.prototype.loadResConfig = function () {
+        //初始化Resource资源加载库
+        core.App.ResourceUtils.addConfig("resource/default.res.json", "resource/");
+        core.App.ResourceUtils.addConfig("resource/resource_core.res.json", "resource/");
+        core.App.ResourceUtils.addConfig("resource/resource_ui.res.json", "resource/");
+        core.App.ResourceUtils.addConfig("resource/resource_battle.res.json", "resource/");
+        core.App.ResourceUtils.addConfig("resource/resource_rpg.res.json", "resource/");
+        core.App.ResourceUtils.loadConfig(this.onConfigComplete, this);
+    };
+    /**
+     * 配置文件加载完成,开始预加载preload资源组。
+     */
+    Main.prototype.onConfigComplete = function () {
+        //加载皮肤主题配置文件,可以手动修改这个文件。替换默认皮肤。
+        var theme = new eui.Theme("resource/default.thm.json", this.stage);
+        theme.addEventListener(eui.UIEvent.COMPLETE, this.onThemeLoadComplete, this);
+    };
+    /**
+     * 主题文件加载完成
+     */
+    Main.prototype.onThemeLoadComplete = function () {
+        //模块初始化
+        this.initModule();
+        //设置加载进度界面
+        core.App.SceneManager.runScene(SceneConst.LOADING);
+        //开启游戏
+        // new RpgTest();
+        // new ProtoBufTest();
+        // new EUITest();
+    };
+    Main.prototype.initModule = function () {
+        core.App.ModuleManager.register(ModuleConst.Loading, new LoadingModule()); //加载中模块
     };
     Main.prototype.runGame = function () {
         return __awaiter(this, void 0, void 0, function () {
@@ -95,6 +146,12 @@ var Main = (function (_super) {
                 }
             });
         });
+    };
+    /**
+     * 创建场景界面
+     * Create scene interface
+     */
+    Main.prototype.createGameScene = function () {
     };
     Main.prototype.loadResource = function () {
         return __awaiter(this, void 0, void 0, function () {
@@ -136,12 +193,7 @@ var Main = (function (_super) {
             }, _this);
         });
     };
-    /**
-     * 创建场景界面
-     * Create scene interface
-     */
-    Main.prototype.createGameScene = function () {
-    };
     return Main;
 }(eui.UILayer));
 __reflect(Main.prototype, "Main");
+//# sourceMappingURL=Main.js.map
