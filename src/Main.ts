@@ -15,9 +15,6 @@ class Main extends eui.UILayer {
         //加载资源配置文件
         this.loadResConfig();
 
-        this.runGame().catch(e => {
-            console.log(e);
-        })
     }
     private initLifecycle(): void {
         egret.lifecycle.addLifecycleListener((context) => {
@@ -54,10 +51,10 @@ class Main extends eui.UILayer {
     private loadResConfig(): void {
         //初始化Resource资源加载库
         core.App.ResourceUtils.addConfig("resource/default.res.json", "resource/");
-        core.App.ResourceUtils.addConfig("resource/resource_core.res.json", "resource/");
-        core.App.ResourceUtils.addConfig("resource/resource_ui.res.json", "resource/");
-        core.App.ResourceUtils.addConfig("resource/resource_battle.res.json", "resource/");
-        core.App.ResourceUtils.addConfig("resource/resource_rpg.res.json", "resource/");
+        // core.App.ResourceUtils.addConfig("resource/resource_core.res.json", "resource/");
+        // core.App.ResourceUtils.addConfig("resource/resource_ui.res.json", "resource/");
+        // core.App.ResourceUtils.addConfig("resource/resource_battle.res.json", "resource/");
+        // core.App.ResourceUtils.addConfig("resource/resource_rpg.res.json", "resource/");
         core.App.ResourceUtils.loadConfig(this.onConfigComplete, this);
     }
 
@@ -88,79 +85,6 @@ class Main extends eui.UILayer {
 
     private initModule(): void {
         core.App.ModuleManager.register(ModuleConst.Loading, new LoadingModule());//加载中模块
-    }
-
-    
-
-
-
-
-
-
-
-
-
-
-
-    
-    private async runGame() {
-        await this.loadResource()
-        this.createGameScene();
-        const result = await RES.getResAsync("description_json")
-
-        await platform.login();
-        const userInfo = await platform.getUserInfo();
-        console.log(userInfo);
-
-    }
-
-    /**
-     * 创建场景界面
-     * Create scene interface
-     */
-    protected createGameScene(): void {
-
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-    private async loadResource() {
-        try {
-            const loadingView = new LoadingUI();
-            this.stage.addChild(loadingView);
-            await RES.loadConfig("resource/default.res.json", "resource/");
-            await this.loadTheme();
-            await RES.loadGroup("preload", 0, loadingView);
-            this.stage.removeChild(loadingView);
-        }
-        catch (e) {
-            console.error(e);
-        }
-    }
-
-    private loadTheme() {
-        return new Promise<void>((resolve, reject) => {
-            // load skin theme configuration file, you can manually modify the file. And replace the default skin.
-            //加载皮肤主题配置文件,可以手动修改这个文件。替换默认皮肤。
-            let theme = new eui.Theme("resource/default.thm.json", this.stage);
-            theme.addEventListener(eui.UIEvent.COMPLETE, () => {
-                resolve();
-            }, this);
-
-        })
     }
 
 }
