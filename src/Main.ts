@@ -38,6 +38,7 @@ class Main extends eui.UILayer {
      */
     private initScene(): void {
         core.App.SceneManager.register(SceneConst.LOADING, new LoadingScene());
+        core.App.SceneManager.register(SceneConst.Login, new LoginScene());
         core.App.SceneManager.register(SceneConst.UI, new UIScene());
         // core.App.SceneManager.register(SceneConst.Game, new GameScene());
         // core.App.SceneManager.register(SceneConst.RpgGame, new RpgGameScene());
@@ -77,10 +78,7 @@ class Main extends eui.UILayer {
         //设置加载进度界面
         core.App.SceneManager.runScene(SceneConst.LOADING);
 
-        //开启游戏
-        // new RpgTest();
-        // new ProtoBufTest();
-        // new EUITest();
+    
     }
 
     private initModule(): void {

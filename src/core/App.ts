@@ -260,14 +260,14 @@ module core {
             return EasyLoading.getSingtonInstance();
         }
 
-        // /**
-        //  * DragonBones工厂类
-        //  * @returns {any}
-        //  * @constructor
-        //  */
-        // public static get DragonBonesFactory(): DragonBonesFactory {
-        //     return DragonBonesFactory.getSingtonInstance();
-        // }
+        /**
+         * DragonBones工厂类
+         * @returns {any}
+         * @constructor
+         */
+        public static get DragonBonesFactory(): DragonBonesFactory {
+            return DragonBonesFactory.getSingtonInstance();
+        }
 
         /**
          * StarlingSwf工厂类
