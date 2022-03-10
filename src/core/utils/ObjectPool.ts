@@ -59,6 +59,9 @@ module core {
                 return list.pop();
             } else {
                 var classZ: any = egret.getDefinitionByName(refKey);
+                if(!classZ) {
+                    classZ = egret.getDefinitionByName('core.' + refKey);
+                }
                 var argsLen: number = args.length;
                 var obj: any;
                 if (argsLen == 0) {

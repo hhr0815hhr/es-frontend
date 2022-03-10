@@ -78,7 +78,8 @@ class Main extends eui.UILayer {
         //设置加载进度界面
         core.App.SceneManager.runScene(SceneConst.LOADING);
 
-    
+        //init app
+        core.App.Init();
     }
 
     private initModule(): void {

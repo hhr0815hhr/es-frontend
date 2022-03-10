@@ -1,0 +1,12 @@
+syntax = "proto3";
+package protos;
+
+message C2S_Login {
+    string username = 1;
+    string password = 2;
+}
+
+message S2C_Login {
+    int32 code = 1;
+    string msg = 2;
+}
