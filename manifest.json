@@ -8,7 +8,9 @@
 		"libs/modules/game/game.js",
 		"libs/modules/socket/socket.js",
 		"libs/modules/tween/tween.js",
-		"libs/modules/promise/promise.js"
+		"libs/modules/promise/promise.js",
+		"protobuf/library/protobuf-library.js",
+		"protobuf/bundles/protobuf-bundles.js"
 	],
 	"game": [
 		"bin-debug/core/starlingswf/display/SwfSprite.js",
@@ -116,6 +118,7 @@
 		"bin-debug/logic/mvc/view/LoginView.js",
 		"bin-debug/logic/scene/LayerManager.js",
 		"bin-debug/logic/scene/LoadingScene.js",
+		"bin-debug/logic/scene/LoginScene.js",
 		"bin-debug/logic/scene/UIScene.js"
 	]
 }

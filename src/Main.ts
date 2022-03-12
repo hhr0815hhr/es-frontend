@@ -52,7 +52,7 @@ class Main extends eui.UILayer {
     private loadResConfig(): void {
         //初始化Resource资源加载库
         core.App.ResourceUtils.addConfig("resource/default.res.json", "resource/");
-        // core.App.ResourceUtils.addConfig("resource/resource_core.res.json", "resource/");
+        core.App.ResourceUtils.addConfig("resource/resource_core.res.json", "resource/");
         // core.App.ResourceUtils.addConfig("resource/resource_ui.res.json", "resource/");
         // core.App.ResourceUtils.addConfig("resource/resource_battle.res.json", "resource/");
         // core.App.ResourceUtils.addConfig("resource/resource_rpg.res.json", "resource/");
@@ -75,11 +75,14 @@ class Main extends eui.UILayer {
         //模块初始化
         this.initModule();
 
+        //加载配置组
+        
+
         //设置加载进度界面
         core.App.SceneManager.runScene(SceneConst.LOADING);
 
         //init app
-        core.App.Init();
+        new Gamepad();
     }
 
     private initModule(): void {

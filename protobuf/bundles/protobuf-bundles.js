@@ -18,7 +18,7 @@ $root.protos = (function() {
     /**
      * ChatChannel enum.
      * @name protos.ChatChannel
-     * @enum {string}
+     * @enum {number}
      * @property {number} Lobby=0 Lobby value
      * @property {number} Cow=1 Cow value
      * @property {number} Landlord=2 Landlord value
@@ -107,11 +107,11 @@ $root.protos = (function() {
         C2S_Chat.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
-            if (message.msg != null && message.hasOwnProperty("msg"))
+            if (message.msg != null && Object.hasOwnProperty.call(message, "msg"))
                 writer.uint32(/* id 1, wireType 2 =*/10).string(message.msg);
-            if (message.channel != null && message.hasOwnProperty("channel"))
+            if (message.channel != null && Object.hasOwnProperty.call(message, "channel"))
                 writer.uint32(/* id 2, wireType 0 =*/16).int32(message.channel);
-            if (message.time != null && message.hasOwnProperty("time"))
+            if (message.time != null && Object.hasOwnProperty.call(message, "time"))
                 writer.uint32(/* id 3, wireType 0 =*/24).int64(message.time);
             return writer;
         };
@@ -289,13 +289,13 @@ $root.protos = (function() {
         S2C_Chat.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
-            if (message.msg != null && message.hasOwnProperty("msg"))
+            if (message.msg != null && Object.hasOwnProperty.call(message, "msg"))
                 writer.uint32(/* id 1, wireType 2 =*/10).string(message.msg);
-            if (message.channel != null && message.hasOwnProperty("channel"))
+            if (message.channel != null && Object.hasOwnProperty.call(message, "channel"))
                 writer.uint32(/* id 2, wireType 0 =*/16).int32(message.channel);
-            if (message.time != null && message.hasOwnProperty("time"))
+            if (message.time != null && Object.hasOwnProperty.call(message, "time"))
                 writer.uint32(/* id 3, wireType 0 =*/24).int64(message.time);
-            if (message.from != null && message.hasOwnProperty("from"))
+            if (message.from != null && Object.hasOwnProperty.call(message, "from"))
                 writer.uint32(/* id 4, wireType 0 =*/32).int64(message.from);
             return writer;
         };
@@ -399,7 +399,7 @@ $root.protos = (function() {
     /**
      * CmdType enum.
      * @name protos.CmdType
-     * @enum {string}
+     * @enum {number}
      * @property {number} CmdType_None=0 CmdType_None value
      * @property {number} CMD_S2C_Login=10000 CMD_S2C_Login value
      * @property {number} CMD_C2S_Login=10001 CMD_C2S_Login value
@@ -509,9 +509,9 @@ $root.protos = (function() {
         S2C_Cow_Start.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
-            if (message.CountDown != null && message.hasOwnProperty("CountDown"))
+            if (message.CountDown != null && Object.hasOwnProperty.call(message, "CountDown"))
                 writer.uint32(/* id 1, wireType 0 =*/8).int32(message.CountDown);
-            if (message.State != null && message.hasOwnProperty("State"))
+            if (message.State != null && Object.hasOwnProperty.call(message, "State"))
                 writer.uint32(/* id 2, wireType 0 =*/16).int32(message.State);
             return writer;
         };
@@ -675,9 +675,9 @@ $root.protos = (function() {
         S2C_Cow_Draw.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
-            if (message.CountDown != null && message.hasOwnProperty("CountDown"))
+            if (message.CountDown != null && Object.hasOwnProperty.call(message, "CountDown"))
                 writer.uint32(/* id 1, wireType 0 =*/8).int32(message.CountDown);
-            if (message.State != null && message.hasOwnProperty("State"))
+            if (message.State != null && Object.hasOwnProperty.call(message, "State"))
                 writer.uint32(/* id 2, wireType 0 =*/16).int32(message.State);
             if (message.Cards != null && message.Cards.length)
                 for (var i = 0; i < message.Cards.length; ++i)
@@ -1023,9 +1023,9 @@ $root.protos = (function() {
         S2C_Cow_Compare.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
-            if (message.CountDown != null && message.hasOwnProperty("CountDown"))
+            if (message.CountDown != null && Object.hasOwnProperty.call(message, "CountDown"))
                 writer.uint32(/* id 1, wireType 0 =*/8).int32(message.CountDown);
-            if (message.State != null && message.hasOwnProperty("State"))
+            if (message.State != null && Object.hasOwnProperty.call(message, "State"))
                 writer.uint32(/* id 2, wireType 0 =*/16).int32(message.State);
             if (message.CowType != null && message.CowType.length)
                 for (var i = 0; i < message.CowType.length; ++i)
@@ -1208,7 +1208,7 @@ $root.protos = (function() {
         S2C_Cow_Ready.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
-            if (message.State != null && message.hasOwnProperty("State"))
+            if (message.State != null && Object.hasOwnProperty.call(message, "State"))
                 writer.uint32(/* id 1, wireType 0 =*/8).int32(message.State);
             return writer;
         };
@@ -1356,9 +1356,9 @@ $root.protos = (function() {
         C2S_Login.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
-            if (message.username != null && message.hasOwnProperty("username"))
+            if (message.username != null && Object.hasOwnProperty.call(message, "username"))
                 writer.uint32(/* id 1, wireType 2 =*/10).string(message.username);
-            if (message.password != null && message.hasOwnProperty("password"))
+            if (message.password != null && Object.hasOwnProperty.call(message, "password"))
                 writer.uint32(/* id 2, wireType 2 =*/18).string(message.password);
             return writer;
         };
@@ -1512,9 +1512,9 @@ $root.protos = (function() {
         S2C_Login.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
-            if (message.code != null && message.hasOwnProperty("code"))
+            if (message.code != null && Object.hasOwnProperty.call(message, "code"))
                 writer.uint32(/* id 1, wireType 0 =*/8).int32(message.code);
-            if (message.msg != null && message.hasOwnProperty("msg"))
+            if (message.msg != null && Object.hasOwnProperty.call(message, "msg"))
                 writer.uint32(/* id 2, wireType 2 =*/18).string(message.msg);
             return writer;
         };
@@ -1659,7 +1659,7 @@ $root.protos = (function() {
         C2S_RoomList.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
-            if (message.RoomType != null && message.hasOwnProperty("RoomType"))
+            if (message.RoomType != null && Object.hasOwnProperty.call(message, "RoomType"))
                 writer.uint32(/* id 1, wireType 2 =*/10).string(message.RoomType);
             return writer;
         };
@@ -1965,11 +1965,11 @@ $root.protos = (function() {
         RoomInfo.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
-            if (message.RoomId != null && message.hasOwnProperty("RoomId"))
+            if (message.RoomId != null && Object.hasOwnProperty.call(message, "RoomId"))
                 writer.uint32(/* id 1, wireType 0 =*/8).int32(message.RoomId);
-            if (message.RoomPlayerNum != null && message.hasOwnProperty("RoomPlayerNum"))
+            if (message.RoomPlayerNum != null && Object.hasOwnProperty.call(message, "RoomPlayerNum"))
                 writer.uint32(/* id 2, wireType 0 =*/16).int32(message.RoomPlayerNum);
-            if (message.RoomStatus != null && message.hasOwnProperty("RoomStatus"))
+            if (message.RoomStatus != null && Object.hasOwnProperty.call(message, "RoomStatus"))
                 writer.uint32(/* id 3, wireType 0 =*/24).int32(message.RoomStatus);
             return writer;
         };
@@ -2129,9 +2129,9 @@ $root.protos = (function() {
         C2S_CreateRoom.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
-            if (message.RoomType != null && message.hasOwnProperty("RoomType"))
+            if (message.RoomType != null && Object.hasOwnProperty.call(message, "RoomType"))
                 writer.uint32(/* id 1, wireType 2 =*/10).string(message.RoomType);
-            if (message.RoomName != null && message.hasOwnProperty("RoomName"))
+            if (message.RoomName != null && Object.hasOwnProperty.call(message, "RoomName"))
                 writer.uint32(/* id 2, wireType 2 =*/18).string(message.RoomName);
             return writer;
         };
@@ -2276,7 +2276,7 @@ $root.protos = (function() {
         S2C_CreateRoom.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
-            if (message.code != null && message.hasOwnProperty("code"))
+            if (message.code != null && Object.hasOwnProperty.call(message, "code"))
                 writer.uint32(/* id 1, wireType 0 =*/8).int32(message.code);
             return writer;
         };
@@ -2424,9 +2424,9 @@ $root.protos = (function() {
         C2S_EnterRoom.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
-            if (message.RoomId != null && message.hasOwnProperty("RoomId"))
+            if (message.RoomId != null && Object.hasOwnProperty.call(message, "RoomId"))
                 writer.uint32(/* id 1, wireType 0 =*/8).int32(message.RoomId);
-            if (message.RoomType != null && message.hasOwnProperty("RoomType"))
+            if (message.RoomType != null && Object.hasOwnProperty.call(message, "RoomType"))
                 writer.uint32(/* id 2, wireType 2 =*/18).string(message.RoomType);
             return writer;
         };
@@ -2580,9 +2580,9 @@ $root.protos = (function() {
         S2C_EnterRoom.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
-            if (message.code != null && message.hasOwnProperty("code"))
+            if (message.code != null && Object.hasOwnProperty.call(message, "code"))
                 writer.uint32(/* id 1, wireType 0 =*/8).int32(message.code);
-            if (message.playerId != null && message.hasOwnProperty("playerId"))
+            if (message.playerId != null && Object.hasOwnProperty.call(message, "playerId"))
                 writer.uint32(/* id 2, wireType 0 =*/16).int64(message.playerId);
             return writer;
         };
@@ -2736,9 +2736,9 @@ $root.protos = (function() {
         C2S_LeaveRoom.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
-            if (message.RoomId != null && message.hasOwnProperty("RoomId"))
+            if (message.RoomId != null && Object.hasOwnProperty.call(message, "RoomId"))
                 writer.uint32(/* id 1, wireType 0 =*/8).int32(message.RoomId);
-            if (message.RoomType != null && message.hasOwnProperty("RoomType"))
+            if (message.RoomType != null && Object.hasOwnProperty.call(message, "RoomType"))
                 writer.uint32(/* id 2, wireType 2 =*/18).string(message.RoomType);
             return writer;
         };
@@ -2892,9 +2892,9 @@ $root.protos = (function() {
         S2C_LeaveRoom.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
-            if (message.code != null && message.hasOwnProperty("code"))
+            if (message.code != null && Object.hasOwnProperty.call(message, "code"))
                 writer.uint32(/* id 1, wireType 0 =*/8).int32(message.code);
-            if (message.playerId != null && message.hasOwnProperty("playerId"))
+            if (message.playerId != null && Object.hasOwnProperty.call(message, "playerId"))
                 writer.uint32(/* id 2, wireType 0 =*/16).int64(message.playerId);
             return writer;
         };
@@ -3057,11 +3057,11 @@ $root.protos = (function() {
         C2S_Ready.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
-            if (message.roomId != null && message.hasOwnProperty("roomId"))
+            if (message.roomId != null && Object.hasOwnProperty.call(message, "roomId"))
                 writer.uint32(/* id 1, wireType 0 =*/8).int32(message.roomId);
-            if (message.roomType != null && message.hasOwnProperty("roomType"))
+            if (message.roomType != null && Object.hasOwnProperty.call(message, "roomType"))
                 writer.uint32(/* id 2, wireType 2 =*/18).string(message.roomType);
-            if (message.Ready != null && message.hasOwnProperty("Ready"))
+            if (message.Ready != null && Object.hasOwnProperty.call(message, "Ready"))
                 writer.uint32(/* id 3, wireType 0 =*/24).int32(message.Ready);
             return writer;
         };
@@ -3221,9 +3221,9 @@ $root.protos = (function() {
         S2C_Ready.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
-            if (message.code != null && message.hasOwnProperty("code"))
+            if (message.code != null && Object.hasOwnProperty.call(message, "code"))
                 writer.uint32(/* id 1, wireType 0 =*/8).int32(message.code);
-            if (message.playerId != null && message.hasOwnProperty("playerId"))
+            if (message.playerId != null && Object.hasOwnProperty.call(message, "playerId"))
                 writer.uint32(/* id 2, wireType 0 =*/16).int64(message.playerId);
             return writer;
         };

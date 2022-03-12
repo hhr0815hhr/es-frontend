@@ -1,4 +1,5 @@
 type Long = protobuf.Long;
+// DO NOT EDIT! This is a generated file. Edit the JSDoc in src/*.js instead and run 'npm run types'.
 
 /** Namespace protos. */
 declare namespace protos {
@@ -89,7 +90,7 @@ declare namespace protos {
          * @param message Plain object to verify
          * @returns `null` if valid, otherwise the reason why it is not
          */
-        public static verify(message: [ 'object' ].<string, any>): (string|null);
+        public static verify(message: { [k: string]: any }): (string|null);
     }
 
     /** Properties of a S2C_Chat. */
@@ -176,7 +177,7 @@ declare namespace protos {
          * @param message Plain object to verify
          * @returns `null` if valid, otherwise the reason why it is not
          */
-        public static verify(message: [ 'object' ].<string, any>): (string|null);
+        public static verify(message: { [k: string]: any }): (string|null);
     }
 
     /** CmdType enum. */
@@ -274,7 +275,7 @@ declare namespace protos {
          * @param message Plain object to verify
          * @returns `null` if valid, otherwise the reason why it is not
          */
-        public static verify(message: [ 'object' ].<string, any>): (string|null);
+        public static verify(message: { [k: string]: any }): (string|null);
     }
 
     /** Properties of a S2C_Cow_Draw. */
@@ -306,7 +307,7 @@ declare namespace protos {
         public State: number;
 
         /** S2C_Cow_Draw Cards. */
-        public Cards: [ 'Array' ].<protos.ICards>;
+        public Cards: protos.ICards[];
 
         /**
          * Creates a new S2C_Cow_Draw instance using the specified properties.
@@ -355,7 +356,7 @@ declare namespace protos {
          * @param message Plain object to verify
          * @returns `null` if valid, otherwise the reason why it is not
          */
-        public static verify(message: [ 'object' ].<string, any>): (string|null);
+        public static verify(message: { [k: string]: any }): (string|null);
     }
 
     /** Properties of a Cards. */
@@ -375,7 +376,7 @@ declare namespace protos {
         constructor(properties?: protos.ICards);
 
         /** Cards Card. */
-        public Card: [ 'Array' ].<number>;
+        public Card: number[];
 
         /**
          * Creates a new Cards instance using the specified properties.
@@ -424,7 +425,7 @@ declare namespace protos {
          * @param message Plain object to verify
          * @returns `null` if valid, otherwise the reason why it is not
          */
-        public static verify(message: [ 'object' ].<string, any>): (string|null);
+        public static verify(message: { [k: string]: any }): (string|null);
     }
 
     /** Properties of a S2C_Cow_Compare. */
@@ -459,10 +460,10 @@ declare namespace protos {
         public State: number;
 
         /** S2C_Cow_Compare CowType. */
-        public CowType: [ 'Array' ].<string>;
+        public CowType: string[];
 
         /** S2C_Cow_Compare Result. */
-        public Result: [ 'Array' ].<number>;
+        public Result: number[];
 
         /**
          * Creates a new S2C_Cow_Compare instance using the specified properties.
@@ -511,7 +512,7 @@ declare namespace protos {
          * @param message Plain object to verify
          * @returns `null` if valid, otherwise the reason why it is not
          */
-        public static verify(message: [ 'object' ].<string, any>): (string|null);
+        public static verify(message: { [k: string]: any }): (string|null);
     }
 
     /** Properties of a S2C_Cow_Ready. */
@@ -580,7 +581,7 @@ declare namespace protos {
          * @param message Plain object to verify
          * @returns `null` if valid, otherwise the reason why it is not
          */
-        public static verify(message: [ 'object' ].<string, any>): (string|null);
+        public static verify(message: { [k: string]: any }): (string|null);
     }
 
     /** Properties of a C2S_Login. */
@@ -655,7 +656,7 @@ declare namespace protos {
          * @param message Plain object to verify
          * @returns `null` if valid, otherwise the reason why it is not
          */
-        public static verify(message: [ 'object' ].<string, any>): (string|null);
+        public static verify(message: { [k: string]: any }): (string|null);
     }
 
     /** Properties of a S2C_Login. */
@@ -730,7 +731,7 @@ declare namespace protos {
          * @param message Plain object to verify
          * @returns `null` if valid, otherwise the reason why it is not
          */
-        public static verify(message: [ 'object' ].<string, any>): (string|null);
+        public static verify(message: { [k: string]: any }): (string|null);
     }
 
     /** Properties of a C2S_RoomList. */
@@ -799,7 +800,7 @@ declare namespace protos {
          * @param message Plain object to verify
          * @returns `null` if valid, otherwise the reason why it is not
          */
-        public static verify(message: [ 'object' ].<string, any>): (string|null);
+        public static verify(message: { [k: string]: any }): (string|null);
     }
 
     /** Properties of a S2C_RoomList. */
@@ -819,7 +820,7 @@ declare namespace protos {
         constructor(properties?: protos.IS2C_RoomList);
 
         /** S2C_RoomList RoomList. */
-        public RoomList: [ 'Array' ].<protos.IRoomInfo>;
+        public RoomList: protos.IRoomInfo[];
 
         /**
          * Creates a new S2C_RoomList instance using the specified properties.
@@ -868,7 +869,7 @@ declare namespace protos {
          * @param message Plain object to verify
          * @returns `null` if valid, otherwise the reason why it is not
          */
-        public static verify(message: [ 'object' ].<string, any>): (string|null);
+        public static verify(message: { [k: string]: any }): (string|null);
     }
 
     /** Properties of a RoomInfo. */
@@ -949,7 +950,7 @@ declare namespace protos {
          * @param message Plain object to verify
          * @returns `null` if valid, otherwise the reason why it is not
          */
-        public static verify(message: [ 'object' ].<string, any>): (string|null);
+        public static verify(message: { [k: string]: any }): (string|null);
     }
 
     /** Properties of a C2S_CreateRoom. */
@@ -1024,7 +1025,7 @@ declare namespace protos {
          * @param message Plain object to verify
          * @returns `null` if valid, otherwise the reason why it is not
          */
-        public static verify(message: [ 'object' ].<string, any>): (string|null);
+        public static verify(message: { [k: string]: any }): (string|null);
     }
 
     /** Properties of a S2C_CreateRoom. */
@@ -1093,7 +1094,7 @@ declare namespace protos {
          * @param message Plain object to verify
          * @returns `null` if valid, otherwise the reason why it is not
          */
-        public static verify(message: [ 'object' ].<string, any>): (string|null);
+        public static verify(message: { [k: string]: any }): (string|null);
     }
 
     /** Properties of a C2S_EnterRoom. */
@@ -1168,7 +1169,7 @@ declare namespace protos {
          * @param message Plain object to verify
          * @returns `null` if valid, otherwise the reason why it is not
          */
-        public static verify(message: [ 'object' ].<string, any>): (string|null);
+        public static verify(message: { [k: string]: any }): (string|null);
     }
 
     /** Properties of a S2C_EnterRoom. */
@@ -1243,7 +1244,7 @@ declare namespace protos {
          * @param message Plain object to verify
          * @returns `null` if valid, otherwise the reason why it is not
          */
-        public static verify(message: [ 'object' ].<string, any>): (string|null);
+        public static verify(message: { [k: string]: any }): (string|null);
     }
 
     /** Properties of a C2S_LeaveRoom. */
@@ -1318,7 +1319,7 @@ declare namespace protos {
          * @param message Plain object to verify
          * @returns `null` if valid, otherwise the reason why it is not
          */
-        public static verify(message: [ 'object' ].<string, any>): (string|null);
+        public static verify(message: { [k: string]: any }): (string|null);
     }
 
     /** Properties of a S2C_LeaveRoom. */
@@ -1393,7 +1394,7 @@ declare namespace protos {
          * @param message Plain object to verify
          * @returns `null` if valid, otherwise the reason why it is not
          */
-        public static verify(message: [ 'object' ].<string, any>): (string|null);
+        public static verify(message: { [k: string]: any }): (string|null);
     }
 
     /** Properties of a C2S_Ready. */
@@ -1474,7 +1475,7 @@ declare namespace protos {
          * @param message Plain object to verify
          * @returns `null` if valid, otherwise the reason why it is not
          */
-        public static verify(message: [ 'object' ].<string, any>): (string|null);
+        public static verify(message: { [k: string]: any }): (string|null);
     }
 
     /** Properties of a S2C_Ready. */
@@ -1549,6 +1550,6 @@ declare namespace protos {
          * @param message Plain object to verify
          * @returns `null` if valid, otherwise the reason why it is not
          */
-        public static verify(message: [ 'object' ].<string, any>): (string|null);
+        public static verify(message: { [k: string]: any }): (string|null);
     }
 }

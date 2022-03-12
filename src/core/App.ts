@@ -313,6 +313,7 @@ module core {
         public static Init(): void {
             console.log("当前引擎版本: ", egret.Capabilities.engineVersion);
             //全局配置数据
+            // RES.loadGroup("preload_core");
             App.GlobalData = RES.getRes("global");
             //开启调试
             App.DebugUtils.isOpen(App.GlobalData.IsDebug);
