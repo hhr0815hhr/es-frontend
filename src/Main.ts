@@ -82,11 +82,12 @@ class Main extends eui.UILayer {
         core.App.SceneManager.runScene(SceneConst.LOADING);
 
         //init app
-        new Gamepad();
+        new Game();
     }
 
     private initModule(): void {
         core.App.ModuleManager.register(ModuleConst.Loading, new LoadingModule());//加载中模块
+        // core.App.ModuleManager.register(ModuleConst.Login, new LoginModule());//登录模块
     }
 
 }

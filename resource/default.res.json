@@ -132,9 +132,19 @@
 			"name": "egret_icon_png"
 		},
 		{
-			"name": "description_json",
+			"url": "config/description.json",
 			"type": "json",
-			"url": "config/description.json"
+			"name": "description_json"
+		},
+		{
+			"url": "assets/login.png",
+			"type": "image",
+			"name": "login_png"
+		},
+		{
+			"url": "assets/login-bg.png",
+			"type": "image",
+			"name": "login-bg_png"
 		}
 	]
 }

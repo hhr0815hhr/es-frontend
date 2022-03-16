@@ -64,19 +64,20 @@ module core {
                 }
                 var argsLen: number = args.length;
                 var obj: any;
-                if (argsLen == 0) {
-                    obj = new classZ();
-                } else if (argsLen == 1) {
-                    obj = new classZ(args[0]);
-                } else if (argsLen == 2) {
-                    obj = new classZ(args[0], args[1]);
-                } else if (argsLen == 3) {
-                    obj = new classZ(args[0], args[1], args[2]);
-                } else if (argsLen == 4) {
-                    obj = new classZ(args[0], args[1], args[2], args[3]);
-                } else if (argsLen == 5) {
-                    obj = new classZ(args[0], args[1], args[2], args[3], args[4]);
-                }
+                obj = new classZ(...args);
+                // if (argsLen == 0) {
+                //     obj = new classZ();
+                // } else if (argsLen == 1) {
+                //     obj = new classZ(args[0]);
+                // } else if (argsLen == 2) {
+                //     obj = new classZ(args[0], args[1]);
+                // } else if (argsLen == 3) {
+                //     obj = new classZ(args[0], args[1], args[2]);
+                // } else if (argsLen == 4) {
+                //     obj = new classZ(args[0], args[1], args[2], args[3]);
+                // } else if (argsLen == 5) {
+                //     obj = new classZ(args[0], args[1], args[2], args[3], args[4]);
+                // }
                 obj.ObjectPoolKey = refKey;
                 return obj;
             }

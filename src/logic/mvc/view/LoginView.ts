@@ -1,6 +1,8 @@
 class LoginView extends core.BaseEuiView {
     public constructor($controller:core.BaseController, $parent:eui.Group){
         super($controller, $parent);
+
+        this.skinName = "resource/skins/LoginUISkin.exml";
     }
 
     /**
