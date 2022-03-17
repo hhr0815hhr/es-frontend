@@ -1,7 +1,7 @@
 {
     "groups":[
         {
-            "keys":"global,simple_config,login_config",
+            "keys":"global,simple_config",
             "name":"preload_core"
         }
     ],
@@ -15,11 +15,6 @@
             "name":"simple_config",
             "type":"json",
             "url":"proto/simple.json"
-        },
-        {
-            "name":"login_config",
-            "type":"json",
-            "url":"config/login_res.json"
         }
     ]
 }

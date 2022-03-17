@@ -1,0 +1,20 @@
+{
+	"groups": [
+		{
+			"keys": "login-bg_png,login_png",
+			"name": "preload_login"
+		}
+	],
+	"resources": [
+		{
+			"url": "assets/login.png",
+			"type": "image",
+			"name": "login_png"
+		},
+		{
+			"url": "assets/login-bg.png",
+			"type": "image",
+			"name": "login-bg_png"
+		}
+	]
+}

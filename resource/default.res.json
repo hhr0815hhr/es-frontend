@@ -135,16 +135,6 @@
 			"url": "config/description.json",
 			"type": "json",
 			"name": "description_json"
-		},
-		{
-			"url": "assets/login.png",
-			"type": "image",
-			"name": "login_png"
-		},
-		{
-			"url": "assets/login-bg.png",
-			"type": "image",
-			"name": "login-bg_png"
 		}
 	]
 }

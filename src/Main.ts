@@ -53,6 +53,7 @@ class Main extends eui.UILayer {
         //初始化Resource资源加载库
         core.App.ResourceUtils.addConfig("resource/default.res.json", "resource/");
         core.App.ResourceUtils.addConfig("resource/resource_core.res.json", "resource/");
+        core.App.ResourceUtils.addConfig("resource/login.res.json", "resource/");
         // core.App.ResourceUtils.addConfig("resource/resource_ui.res.json", "resource/");
         // core.App.ResourceUtils.addConfig("resource/resource_battle.res.json", "resource/");
         // core.App.ResourceUtils.addConfig("resource/resource_rpg.res.json", "resource/");

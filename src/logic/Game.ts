@@ -2,8 +2,11 @@ class Game{
     public constructor()
     {
         //加载资源
-        let groupName:string = "preload_login";
-        core.App.ResourceUtils.loadGroup(groupName,this.onResourceLoadComplete,this.onResourceLoadProgress,this);
+
+        var groupName: string = "preload_GameTest";
+        var subGroups: Array<string> = ["preload_core", "preload_login"];
+      
+        core.App.ResourceUtils.loadGroups(groupName,subGroups,this.onResourceLoadComplete,this.onResourceLoadProgress,this);
     }
 
 

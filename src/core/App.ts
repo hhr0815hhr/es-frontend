@@ -315,6 +315,7 @@ module core {
             //全局配置数据
             // RES.loadGroup("preload_core");
             App.GlobalData = RES.getRes("global");
+            console.log("全局数据：",App.GlobalData)
             //开启调试
             App.DebugUtils.isOpen(App.GlobalData.IsDebug);
             App.DebugUtils.setThreshold(5);
