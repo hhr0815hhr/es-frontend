@@ -1,4 +1,4 @@
 class LoginProto{
-    public static LOGIN_C2S:number = 10001;
-    public static LOGIN_S2C:number = 10002;
+    public static LOGIN_C2S:string = 'login';
+    public static LOGIN_S2C:string = 'onLoginSuccess';
 }
